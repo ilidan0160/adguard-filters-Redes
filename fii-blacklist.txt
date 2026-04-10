@@ -1,0 +1,15 @@
+! Title: Filtros Corporativos FII - Control de Redes
+! Description: Bloqueo de redes sociales con excepciones para Comunicaciones y Presidencia
+! Version: 1.1.0
+
+! --- REGLAS CON EXCEPCION POR ETIQUETA ---
+! Bloquea si el cliente NO tiene la etiqueta 'comunicaciones'
+||facebook.com^$important,ctag=~comunicaciones
+||instagram.com^$important,ctag=~comunicaciones
+||tiktok.com^$important,ctag=~comunicaciones
+||netflix.com^$important,ctag=~comunicaciones
+||youtube.com^$important,ctag=~comunicaciones
+
+! --- REGLAS DE BLOQUEO ABSOLUTO ---
+||pornhub.com^$important
+||xvideos.com^$important
