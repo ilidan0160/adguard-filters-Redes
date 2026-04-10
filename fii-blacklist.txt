@@ -1,15 +1,44 @@
-! Title: Filtros Corporativos FII - Control de Redes
-! Description: Bloqueo de redes sociales con excepciones para Comunicaciones y Presidencia
-! Version: 1.1.0
+! Title: Filtros Corporativos FII - Control Total
+! Description: Bloqueo de Redes/YouTube excepto para VLAN 40/45 y WhatsApp permitido.
+! Version: 1.2.0
 
-! --- REGLAS CON EXCEPCION POR ETIQUETA ---
-! Bloquea si el cliente NO tiene la etiqueta 'comunicaciones'
-||facebook.com^$important,ctag=~comunicaciones
-||instagram.com^$important,ctag=~comunicaciones
-||tiktok.com^$important,ctag=~comunicaciones
-||netflix.com^$important,ctag=~comunicaciones
-||youtube.com^$important,ctag=~comunicaciones
+! =========================================================
+! 1. LISTA BLANCA GLOBAL (Servicios Críticos)
+! =========================================================
+@@||fii.gob.ve^$important
+@@||banesco.com^$important
+@@||zerotier.com^$important
+@@||microsoft.com^$important
+@@||google.com^$important
+@@||googleapis.com^$important
+@@||vscode-cdn.net^$important
+@@||hostkey.com^$important
 
-! --- REGLAS DE BLOQUEO ABSOLUTO ---
+! =========================================================
+! 2. EXCEPCIÓN DE WHATSAPP (Permitido para todos)
+! =========================================================
+@@||whatsapp.com^$important
+@@||whatsapp.net^$important
+
+! =========================================================
+! 3. BLOQUEO SELECTIVO (Solo si NO tienes etiqueta 'vip')
+! =========================================================
+! Si el cliente NO tiene la etiqueta 'vip', se le bloquea:
+
+||facebook.com^$important,ctag=~vip
+||facebook.net^$important,ctag=~vip
+||fbcdn.net^$important,ctag=~vip
+||instagram.com^$important,ctag=~vip
+||cdninstagram.com^$important,ctag=~vip
+||tiktok.com^$important,ctag=~vip
+||byteoversea.com^$important,ctag=~vip
+||netflix.com^$important,ctag=~vip
+||youtube.com^$important,ctag=~vip
+||youtu.be^$important,ctag=~vip
+||googlevideo.com^$important,ctag=~vip
+
+! =========================================================
+! 4. BLOQUEOS ABSOLUTOS (Nadie pasa)
+! =========================================================
 ||pornhub.com^$important
 ||xvideos.com^$important
