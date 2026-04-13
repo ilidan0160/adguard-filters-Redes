@@ -21,21 +21,21 @@
 @@||whatsapp.net^$important
 
 ! =========================================================
-! 3. BLOQUEO SELECTIVO (Solo si NO tienes etiqueta 'vip')
+! 3. BLOQUEO SELECTIVO (Solo si NO tienes etiqueta 'device_pc')
 ! =========================================================
-! Si el cliente NO tiene la etiqueta 'vip', se le bloquea:
+! Si el cliente NO tiene la etiqueta 'device_pc', se le bloquea:
 
-||facebook.com^$important,ctag=~vip
-||facebook.net^$important,ctag=~vip
-||fbcdn.net^$important,ctag=~vip
-||instagram.com^$important,ctag=~vip
-||cdninstagram.com^$important,ctag=~vip
-||tiktok.com^$important,ctag=~vip
-||byteoversea.com^$important,ctag=~vip
-||netflix.com^$important,ctag=~vip
-||youtube.com^$important,ctag=~vip
-||youtu.be^$important,ctag=~vip
-||googlevideo.com^$important,ctag=~vip
+||facebook.com^$important,ctag=~device_phone
+||facebook.net^$important,ctag=~device_pc
+||fbcdn.net^$important,ctag=~device_pc
+||instagram.com^$important,ctag=~device_pc
+||cdninstagram.com^$important,ctag=~device_pc
+||tiktok.com^$important,ctag=~device_pc
+||byteoversea.com^$important,ctag=~device_pc
+||netflix.com^$important,ctag=~device_pc
+||youtube.com^$important,ctag=~device_pc
+||youtu.be^$important,ctag=~device_pc
+||googlevideo.com^$important,ctag=~device_pc
 
 ! =========================================================
 ! 4. BLOQUEOS ABSOLUTOS (Nadie pasa)
